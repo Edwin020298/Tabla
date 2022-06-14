@@ -35,7 +35,7 @@ const signup = memo(() => {
         </button>
       </div>
       <p className="forgot-password text-right">
-        ya estas <a href="/sign-in">registrado?</a>
+        ya estas <a href="/Login">registrado?</a>
       </p>
     </form>
   );

@@ -1,7 +1,7 @@
 import React, { memo, useState, useEffect } from "react";
 import { Container, Table, Row } from "reactstrap";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Links from "../../components/Links/Links";
 
 
@@ -10,6 +10,7 @@ const Home = memo(() => {
   const [berrisPagInfo, setBerrisPagInfo] = useState([]);
   const [paginationNumber, setPaginationNumber] = useState([]);
   const [pag, setPag] = useState(0);
+  const navigate=useNavigate();
 
   useEffect(() => {
     const getBerrys = async () => {
@@ -39,17 +40,13 @@ const Home = memo(() => {
   }, [pag]);
 
   const renderBerries = berris.map((berry, key) => {
+    const data= {berry_url: berry.url};
     return (
       <tr key={key}>
         <td>{key + pag * 20}</td>
         <td>{berry.name}</td>
         <td>
-          <Link
-            to={{
-              pathname: `${berry.name}`,
-              state: { berry_url: berry.url },
-            }}
-          >
+          <Link to= {`/${berry.name}`} state={data}>
             ver {berry.name} detalles
           </Link>
         </td>

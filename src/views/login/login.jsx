@@ -42,7 +42,7 @@ const login = memo(() => {
         </button>
       </div>
       <p className="forgot-password text-right">
-        Olvidaste <a href="/Fruta">la contraseña?</a>
+        ¿No tengo cuenta? <a href="/sign-up">Registrarme</a>
       </p>
     </form>
   );

@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect } from "react";
 import Links from "../../components/Links/Links";
-import { useLocation } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 import axios from "axios";
 import { Navbar, Row} from "reactstrap";
 
