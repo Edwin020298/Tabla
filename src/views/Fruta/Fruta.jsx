@@ -4,7 +4,6 @@ import { useLocation} from "react-router-dom";
 import axios from "axios";
 import { Navbar, Row} from "reactstrap";
 
-
 const Fruta = memo(() => {
   const location = useLocation();
   const [detalles, setDetalles] = useState({});
@@ -31,6 +30,7 @@ const Fruta = memo(() => {
   return (
     <div>
       <Links/>
+
       <div> DETALLES DE LA FRUTA:</div>
       <Row>
         <Navbar color="light" light expand="md">
@@ -42,13 +42,13 @@ const Fruta = memo(() => {
           <br />
           Tiempo De Crecimiento: {detalles.growth_time}
           <br/>
-          Costo De La Fruta: {}
+          Costo De La Fruta: {"---"}
           <br/>
-          Categoria De La Fruta: {}
+          Categoria De La Fruta: {"---"}
           <br />
-          Efectos De La Fruta: {}
+          Efectos De La Fruta: {detalles.effect}
           <br />
-          Imagen De La Fruta spritesxd: {}
+          Imagen De La Fruta sprites: {detalles.sprites}
           <br />
         </Navbar>
       </Row>

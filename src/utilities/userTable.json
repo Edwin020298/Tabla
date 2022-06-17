@@ -1,0 +1,15 @@
+[
+    {
+        "nombre":"Edwin",
+        "apellido":"May",
+        "email":"edwinmaypoot@gmail.com",
+        "contraseña":"Edgardo123"
+    },
+
+    {
+        "nombre":"joel",
+        "apellido":"Cordero",
+        "email":"joelcorderoc@gmail.com",
+        "contraseña":"joel123"
+    }
+]

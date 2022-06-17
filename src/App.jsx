@@ -6,8 +6,17 @@ import Home from "./views/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./views/signup/signup";
 import Links from "./components/Links/Links";
+import User from  '../src/utilities/userTable.json'
+import { useEffect } from "react";
+console.log (User);
 
 function App() {
+ useEffect(() => {
+  localStorage.setItem("user", JSON.stringify(User))
+}, []);
+
+console.log(localStorage.getItem);
+
   return (
     <Router>
       <div className="App">
